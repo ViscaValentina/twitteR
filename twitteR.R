@@ -24,6 +24,3 @@ tweets_clean <- tm_map(tweets_corpus, content_transformer(stri_trans_tolower))
 tweets_clean <- tm_map(tweets_corpus, removeWords, stopwords("english"))
 tweets_clean <- tm_map(tweets_corpus, removeNumbers)
 tweets_clean <- tm_map(tweets_corpus, stripWhitespace)
-
-wordcloud(tweets_clean, random.order=F, col=rainbow(50))
-wordcloud
